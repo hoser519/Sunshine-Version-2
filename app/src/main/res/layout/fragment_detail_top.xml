@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.BlankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter Text"
+        android:id="@+id/textView"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText5"
+        android:layout_gravity="right|center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PageBottom"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <TextView
+        android:layout_width="148dp"
+        android:layout_height="83dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal|top" />
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="424dp"
+        android:text="@string/hello_blank_fragment"
+        android:layout_gravity="left|top" />
+
+</FrameLayout>
