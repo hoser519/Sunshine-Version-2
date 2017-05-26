@@ -1,13 +1,12 @@
 package com.example.android.sunshine.app;
 
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,13 +14,45 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // set the user interface layout for this Activity
+        // the layout file is defined in the project res/layout/activity_main.xml file
+
         setContentView(R.layout.activity_main);
+        // if savedinstancState==null, this is the first launch of this activity
         if (savedInstanceState == null) {
+            Log.v(MainActivity.class.getSimpleName(),"OnCreate:First start" );
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, new ForecastFragment())
                     .commit();
-        }
+        } else
+            Log.v(MainActivity.class.getSimpleName(),"OnCreate" );
     }
+    @Override
+    public  void onStart () {
+        super.onStart();
+        Log.v(MainActivity.class.getSimpleName(),"OnStart:" );
+    }
+    @Override
+    public  void onResume () {
+        super.onResume();
+        Log.v(MainActivity.class.getSimpleName(),"OnResume:" );
+    }
+    @Override
+    public  void onPause () {
+        super.onPause();
+        Log.v(MainActivity.class.getSimpleName(),"OnPause:" );
+    }
+    @Override
+    public  void onStop () {
+        super.onStop();
+        Log.v(MainActivity.class.getSimpleName(),"OnStop:" );
+    }
+    @Override
+    public  void onDestroy() {
+        super.onDestroy();
+        Log.v(MainActivity.class.getSimpleName(),"onDestroy:" );
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -37,27 +68,17 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+
+// These will respond to drop menu items - Fragments can also add items to the menu and will inherit the ones declared by their parent Activity
+        if (id == R.id.action_doNothing) {
+
+//                Intent launchSettings = new Intent(this, SettingsActivity.class);
+//                startActivity(launchSettings);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
-    }
 }
+
