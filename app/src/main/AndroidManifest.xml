@@ -35,6 +35,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.sunshine.app.MainActivity" />
         </activity>
+        <activity
+            android:name=".LightTweak"
+            android:label="@string/title_activity_light_tweak"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.sunshine.app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TopLevel"
+            android:label="@string/title_activity_top_level"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.sunshine.app.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
