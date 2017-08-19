@@ -13,6 +13,9 @@
     <string name="preference_title">App Preferences</string>
     <string name="preference_title1">More App Preferences</string>
     <string name="preference_title2">Even More App Preferences</string>
+    <string name="networkop_dialog">Network Operation</string>
+    <string name="networkop_dialog_cancel">Cancel</string>
+
 
     <string name="key_edittextpref">EditTextPref</string>
 
