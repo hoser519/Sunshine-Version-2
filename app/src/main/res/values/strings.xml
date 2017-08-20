@@ -18,6 +18,11 @@
 
 
     <string name="key_edittextpref">EditTextPref</string>
+    <string name="key_IPString">IPString</string>
+    <string name="key_IPString_default">192.168.0.5</string>
+
+    <string name="key_PortString">PortString</string>
+    <string name="preference_network_title">Network Settings</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
